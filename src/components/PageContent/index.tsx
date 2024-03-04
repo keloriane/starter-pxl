@@ -37,18 +37,20 @@ const PageContent = () => {
 
   return (
     <div>
-      <div className="hero" ref={heroContainer}>
+      {/* <div className="hero" ref={heroContainer}>
         <ImageR
           height={52}
           reactRef={imageHero}
           opacity={1}
           src="https://cdn.sanity.io/images/n9loiw6l/production2/bb5c87e29552f1666c6a003cf14119e567f431ae-4320x2700.png?w=3520&fm=webp"
         />
-      </div>
+      </div> */}
       <section id="about" style={{ marginTop: "96px", marginBottom: "96px" }}>
         <GridContainer colCount={12} as="section" rowGap={70} colGap={16}>
           <Col column={[1, 1, 1, 1]} span={[12, 12, 6, 6]}>
-            <h2 style={{ fontSize: "64px" }}>MAMA : We are art.</h2>
+            <S.TitleMask style={{ fontSize: "64px" }}>
+              MAMA : We are art. MAMA : We are art.MAMA : We are art.
+            </S.TitleMask>
           </Col>
           <Divider />
           <Col column={[1]} span={[6]}>

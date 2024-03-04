@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface AnimatedTextProps {
   text: string;
@@ -21,7 +20,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   fontSize,
   reactRef,
   splitBy,
-  gap,
   duration,
   className,
   highlightWords = [],
@@ -76,7 +74,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     splitText = text.split(" ");
   } else if (splitBy === "phrase") {
     splitText = text.split(/(?:\n|\. |\? )/);
-    // Remove empty phrases
     splitText = splitText.filter((phrase) => phrase.trim() !== "");
   } else {
     splitText = text.split(". ");

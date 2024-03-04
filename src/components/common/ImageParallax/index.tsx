@@ -1,21 +1,8 @@
-import React, { useLayoutEffect, useState } from "react";
-import styled from "styled-components";
+import React, { useLayoutEffect} from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-const ParallaxContainer = styled.div`
-  overflow: hidden;
-  height: 100vh; /* adjust height as needed */
-  position: relative;
-`;
 
-const ParallaxImage = styled.img`
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.2s ease-out; /* adjust transition duration as needed */
-`;
 
 type ImagePrallaxProps = {
   src: string;

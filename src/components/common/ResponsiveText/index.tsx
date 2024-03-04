@@ -10,13 +10,10 @@ interface RTextProps {
   className?: string;
 }
 
-// Define media queries for different breakpoints (mobile-first approach)
 const breakpoints = [420, 640, 768, 1024, 1280, 1440];
 
-// Define the type for StyledText component
 type StyledTextProps = RTextProps & { as: keyof JSX.IntrinsicElements };
 
-// Set up the styled component for the responsive text
 const StyledText = styled.p<StyledTextProps>`
   font-size: ${(props) => props.sizes[0]}; /* Default font size for mobile */
   ${({ fontWeights }) =>
